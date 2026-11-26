@@ -23,7 +23,20 @@ export default function App() {
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed as ServiceItem[];
+          const defaultImagesById = new Map(
+            INITIAL_SERVICES.map((item) => [item.id, item.image])
+          );
+          return (parsed as ServiceItem[]).map((item) => {
+            if (item.image && item.image.startsWith('/src/assets/')) {
+              return {
+                ...item,
+                image:
+                  defaultImagesById.get(item.id) ||
+                  `${import.meta.env.BASE_URL}${item.image.slice(1)}`,
+              };
+            }
+            return item;
+          });
         }
       }
     } catch {

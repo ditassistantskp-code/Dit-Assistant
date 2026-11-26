@@ -1,3 +1,8 @@
+import heroWorkspaceImg from '../assets/images/hero_dit_workspace_1795668401055.jpg';
+import virtualOpsImg from '../assets/images/service_virtual_ops_1795668400419.jpg';
+import webDesignImg from '../assets/images/service_web_design_1795668403430.jpg';
+import dataSystemsImg from '../assets/images/service_data_systems_1795668402806.jpg';
+
 export type ServiceCategory =
   | 'All'
   | 'Virtual Assistance'
@@ -30,10 +35,9 @@ export const COMPANY_INFO = {
   email: 'ditassistantskp@gmail.com',
 };
 
-export const BRAND_LOGO_PATH =
-  '/assets/aistudio/Professional_Office_Assistant_Portrait_e255c116.png';
+export const BRAND_LOGO_PATH = `${import.meta.env.BASE_URL}assets/aistudio/Professional_Office_Assistant_Portrait_e255c116.png`;
 
-export const HERO_IMAGE_PATH = '/src/assets/images/hero_dit_workspace_1795668401055.jpg';
+export const HERO_IMAGE_PATH = heroWorkspaceImg;
 
 export const SERVICE_CATEGORIES: ServiceCategory[] = [
   'All',
@@ -58,7 +62,7 @@ export const INITIAL_SERVICES: ServiceItem[] = [
     startingPrice: 25,
     deliveryTime: '24 Hours',
     fiverrUrl: COMPANY_INFO.fiverrUrl,
-    image: '/src/assets/images/service_virtual_ops_1795668400419.jpg',
+    image: virtualOpsImg,
     featured: true,
   },
   {
@@ -75,7 +79,7 @@ export const INITIAL_SERVICES: ServiceItem[] = [
     startingPrice: 60,
     deliveryTime: '3 Days',
     fiverrUrl: COMPANY_INFO.fiverrUrl,
-    image: '/src/assets/images/service_web_design_1795668403430.jpg',
+    image: webDesignImg,
     featured: true,
   },
   {
@@ -92,7 +96,7 @@ export const INITIAL_SERVICES: ServiceItem[] = [
     startingPrice: 20,
     deliveryTime: '2 Days',
     fiverrUrl: COMPANY_INFO.fiverrUrl,
-    image: '/src/assets/images/service_data_systems_1795668402806.jpg',
+    image: dataSystemsImg,
     featured: true,
   },
   {
