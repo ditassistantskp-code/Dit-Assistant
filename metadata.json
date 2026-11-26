@@ -1,0 +1,6 @@
+{
+  "name": "Dit Assistants",
+  "description": "Digital assistance, data processing, web support, and executive operations by Dit Assistants. Order on Fiverr or connect via WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
